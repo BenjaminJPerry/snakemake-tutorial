@@ -2,6 +2,10 @@
 
 This repository hosts the data needed for the [Snakemake tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html).
 
+## Test DAG for tutorial
+
+<img src="./dag.svg">
+
 ## Uploaders
 
 ### Google Cloud Storage
@@ -36,10 +40,10 @@ would be used like:
 python upload_google_storage.py snakemake-testing-data/ data/
 ```
 
-And it would upload the contents of data (without the data/ prefix) to 
+And it would upload the contents of data (without the data/ prefix) to
 the root of the bucket snakemake-testing-data, which does not need to exist,
 but you need to have permissions via your Google application credentials
-to create or otherwise interact with it. Here is an example of the client 
+to create or otherwise interact with it. Here is an example of the client
 running. Note that it asks for confirmation (y/n) to proceed with the upload:
 
 ```bash
@@ -75,4 +79,3 @@ Uploading samples/C.fastq to snakemake-testing-data
 You should then be able to see your files in Storage! Good job!
 
 ![.aux/upload-google-storage.png](.aux/upload-google-storage.png)
-
